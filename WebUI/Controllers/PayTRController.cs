@@ -130,7 +130,8 @@ public class PayTRController : Controller
             }
             else
             {
-                //Response.Write("PAYTR IFRAME failed. reason:" + json.reason + "");
+                ViewBag.ErrorMessage = "PAYTR IFRAME failed. reason:" + json.reason;
+                return View();
             }
         }
         return View();
