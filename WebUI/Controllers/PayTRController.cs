@@ -127,6 +127,7 @@ public class PayTRController : Controller
             {
                 ViewBag.Status = "success";
                 ViewBag.Src = "https://www.paytr.com/odeme/guvenli/" + json.token;
+                return View();
             }
             else
             {
@@ -134,6 +135,5 @@ public class PayTRController : Controller
                 return View();
             }
         }
-        return View();
     }
 }
